@@ -13,5 +13,16 @@ struct InstagramDesktopApp: App {
         WindowGroup {
             ContentView()
         }
+        .windowStyle(HiddenTitleBarWindowStyle())
+    }
+}
+
+// Hiding Focus Ring...
+
+extension NSTextField {
+
+    open override var focusRingType: NSFocusRingType {
+        get{.none}
+        set{}
     }
 }
